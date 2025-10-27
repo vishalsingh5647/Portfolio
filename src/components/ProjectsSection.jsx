@@ -5,19 +5,19 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A complete e-commerce platform with shopping cart, payment, and admin dashboard features.',
+      title: 'Quiz Application',
+      description: 'An interactive quiz application with multiple-choice questions, score tracking, and real-time feedback.',
       image: '/images/project1.jpg', // Replace with your actual image path
-      technologies: ['React', 'Node.js', 'MongoDB'],
+      technologies: ['React', 'JavaScript', 'CSS'],
       liveLink: '#',
       githubLink: '#'
     },
     {
       id: 2,
       title: 'Portfolio Website',
-      description: 'An interactive portfolio website with animations and responsive design to showcase work.',
+      description: 'A modern portfolio website showcasing my projects with smooth animations and fully responsive design.',
       image: '/images/project2.jpg', // Replace with your actual image path
-      technologies: ['HTML', 'CSS', 'JavaScript'],
+      technologies: ['React.js', 'Vite', 'JavaScript'],
       liveLink: '#',
       githubLink: '#'
     },
