@@ -1,0 +1,246 @@
+.about {
+  min-height: 100vh;
+  width: 100vw;
+  background: transparent;
+  padding: 50px 0;
+  position: relative;
+  margin: 0;
+}
+
+.about-container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #dc2626 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  animation: fadeInDown 1s ease-out;
+  text-shadow: 0 0 40px rgba(220, 38, 38, 0.3);
+}
+
+.about-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #dc2626, #3b82f6, transparent);
+  border-radius: 2px;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  justify-items: center;
+  animation: fadeInUp 1s ease-out 0.3s backwards;
+  width: 100%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-text {
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 550px;
+}
+
+.about-description {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+  text-align: justify;
+}
+
+.skills-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  max-width: 550px;
+}
+
+.skill-tag {
+  padding: 0.5rem 1.2rem;
+  background: rgba(59, 130, 246, 0.1);
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  border-radius: 20px;
+  color: #60a5fa;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.skill-tag:hover {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  border-color: transparent;
+  color: var(--text-primary);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+.about-code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.code-window {
+  width: 100%;
+  max-width: 500px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px var(--shadow-color);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.code-window:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 70px rgba(59, 130, 246, 0.3);
+}
+
+.code-header {
+  background: var(--bg-secondary);
+  padding: 0.8rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.code-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(220, 38, 38, 0.5);
+}
+
+.code-dot:nth-child(1) {
+  background: #ef4444;
+}
+
+.code-dot:nth-child(2) {
+  background: #f59e0b;
+}
+
+.code-dot:nth-child(3) {
+  background: #10b981;
+}
+
+.code-content {
+  padding: 2rem;
+  margin: 0;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  overflow-x: auto;
+}
+
+.code-content code {
+  color: var(--gradient-end);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .about {
+    padding: 40px 0;
+  }
+
+  .about-container {
+    padding: 0 2rem;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-text {
+    padding-right: 0;
+  }
+
+  .about-description {
+    font-size: 1.05rem;
+    text-align: left;
+  }
+
+  .skills-title {
+    font-size: 1.5rem;
+  }
+
+  .code-window {
+    max-width: 100%;
+  }
+
+  .code-content {
+    font-size: 0.85rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .skill-tag {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
